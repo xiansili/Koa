@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/xiansili/Koa#readme",
   "dependencies": {
-    "koa": "^2.6.2"
+    "koa": "^2.6.2",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0"
   }
 }
