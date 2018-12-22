@@ -9,3 +9,6 @@ app.listen(3000, () => {
  console.log( "开启");
   
 });
+
+const {connect} = require('./init.js');
+connect();
