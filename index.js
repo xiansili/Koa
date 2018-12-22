@@ -10,5 +10,24 @@ app.listen(3000, () => {
   
 });
 
-const {connect} = require('./init.js');
-connect();
+//加载路由
+const Router = requier('koa-router');
+let user = require('./controller/user.js');
+let router = new Router();
+
+router.use('./user', user.routes());
+
+app.use(router.routes());
+app.use(router.allowedMethods());
+
+
+
+
+
+const {connect , initSchemas} = require('./init.js');
+(async ()=>{
+ await connect();
+ initSchemas();
+})();
+
+

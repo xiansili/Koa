@@ -1,5 +1,14 @@
 const mongoose = require('mongoose');
-const db = 'mongodb://localhost';
+const db = 'mongodb://localhost/xiansili';
+
+
+//引用schema
+const glob = require('glob');
+const path = require('path');
+
+exports.initSchemas = () => {
+    glob.sync(path.resolve(__dirname, './model', '*.js')).forEach(require);
+};
 
 
 exports.connect = () => {
@@ -8,7 +17,5 @@ exports.connect = () => {
 
     mongoose.connection.once('open', ()=>{
         console.log('123')
-    })
-
-
-}
+    });
+};
