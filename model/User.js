@@ -1,4 +1,9 @@
+//model层（就是和数据库打交道的）
+
+
 const mongoose = require('mongoose');
+
+//定义数据模型，并引入
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({

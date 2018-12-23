@@ -1,6 +1,6 @@
 const Router = require('koa-router');
 let router = new Router();
-const mongoose = requier('mongooose');
+const mongoose = require('mongoose');
 
 
 router.post('/registUser', async (ctx) => {
