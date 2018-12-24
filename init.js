@@ -17,6 +17,6 @@ exports.connect = () => {
     //解析地址
 
     mongoose.connection.once('open', ()=>{
-        console.log('123')
+        console.log('数据库连接成功')
     });
 };
