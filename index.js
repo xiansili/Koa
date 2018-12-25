@@ -13,14 +13,7 @@ const bodyParser = require('koa-bodyparser');
 app.use(bodyParser());
 
 
-app.use(async ctx =>{
-    ctx.body = '是我吗？'
-});
 
-app.listen(3000, () => {
- console.log( "开启");
-  
-});
 
 //加载路由
 const Router = require('koa-router');
@@ -34,7 +27,6 @@ app.use(router.allowedMethods());
 
 
 
-
 //先连接，再初始化，异步操作（async()=>{await}）
 const {connect , initSchemas} = require('./init.js');
 (async ()=>{
@@ -42,4 +34,11 @@ const {connect , initSchemas} = require('./init.js');
  initSchemas();
 })();
 
+app.use(async ctx =>{
+    ctx.body = '是我吗？'
+});
 
+app.listen(4000, () => {
+ console.log( "开启");
+  
+});
