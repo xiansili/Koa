@@ -4,13 +4,14 @@ const app = new Koa();
 //解决跨域问题
 const cors = require('koa2-cors');
 app.use(cors({
-    origin:['http://localhost:8080'],
+    origin:['http://localhost:8082'],
     credentials:true
 
 }));
 //接收前端post请求
 const bodyParser = require('koa-bodyparser');
 app.use(bodyParser());
+
 
 
 
@@ -36,6 +37,7 @@ const {connect , initSchemas} = require('./init.js');
 
 app.use(async ctx =>{
     ctx.body = '是我吗？'
+    
 });
 
 app.listen(4000, () => {

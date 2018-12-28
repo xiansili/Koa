@@ -10,7 +10,8 @@ const userSchema = new Schema({
     userId: Schema.Types.ObjectId,
     userName: { unique: true, type: String },
     password: String,
-    createDate: { type: Date, default: Date.now() }
+    createDate: { type: Date, default: Date.now() },
+    userContent: String 
 });
 
 // 发布模型

@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const db = 'mongodb://localhost/xiansili';
+const db = 'mongodb://localhost/pw';
 
 
 //引用schema
