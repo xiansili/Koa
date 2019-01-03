@@ -27,22 +27,12 @@ router.post("/registUser", async ctx => {
 router.get("/registUser", async ctx => {
   // 获取model
   const User = mongoose.model("User");
-  
-  let date = User.find((err,res)=>{
-	if(err){
-        // console.log(err);
-        
-	} else {
-        // console.log(res);
-        return res;
-	}
-})
-    
-    let ctx_query = ctx.query;
-    let obj = {
-      ctx_query,
-    };
-    ctx.response.body={status:200,meg:'get返回数据',data:obj};
+
+  await User.find()
+    .exec()
+    .then(res => {
+      ctx.body = res;
+    });
 });
 
 module.exports = router;
