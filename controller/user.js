@@ -5,6 +5,7 @@ const db = "mongodb://localhost/pw";
 
 router.post("/registUser", async ctx => {
   // 获取model
+
   
   
   const User = mongoose.model("User");
