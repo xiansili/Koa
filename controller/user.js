@@ -18,6 +18,7 @@ router.post("/registUser", async ctx => {
         message: "注册成功"
       };
     })
+    
     .catch(err => {
       ctx.body = {
         code: 500,
