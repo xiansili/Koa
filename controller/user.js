@@ -1,5 +1,9 @@
+
+//引入路由
 const Router = require("koa-router");
+//实例化路由对象
 let router = new Router();
+
 const mongoose = require("mongoose");
 const db = "mongodb://localhost/pw";
 
