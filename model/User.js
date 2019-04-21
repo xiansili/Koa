@@ -6,6 +6,8 @@ const mongoose = require('mongoose');
 //定义数据模型，并引入
 const Schema = mongoose.Schema;
 //数据类型
+
+
 const userSchema = new Schema({
     userId: Schema.Types.ObjectId,
     userName: { unique: true, type: String },
