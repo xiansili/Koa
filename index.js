@@ -44,11 +44,11 @@
 //  console.log( "开启");
   
 // });
-
 const Koa = require('koa');
 const app = new Koa();
-
 //异步操作
+
+
 app.use(async ctx => {
   ctx.body = 'Hello World';
 });
