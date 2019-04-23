@@ -10,7 +10,6 @@ exports.initSchemas = () => {
     glob.sync(path.resolve(__dirname, './model', '*.js')).forEach(require);
 };
 
-
 exports.connect = () => {
     //连接数据库
     mongoose.connect(db, {useNewUrlParser: true});
