@@ -8,8 +8,12 @@ const mongoose = require("mongoose");
 const db = "mongodb://localhost/pw";
 
 
+
+
 router.post("/registUser", async ctx => {
   // 获取model
+
+  
   const User = mongoose.model("User");
   // 接收post请求封装成user对象
   let newUser = new User(ctx.request.body);
